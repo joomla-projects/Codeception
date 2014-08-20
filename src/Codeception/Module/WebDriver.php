@@ -1785,4 +1785,10 @@ class WebDriver extends \Codeception\Module implements WebInterface, RemoteInter
         );
         return $nodes;
     }
+    
+    public function getElementsCount($selector)
+	{
+		$els = $this->match($this->webDriver, $selector);
+		return $els;
+	}
 }
